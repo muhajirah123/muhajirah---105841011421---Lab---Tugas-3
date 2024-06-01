@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import Masuk from './Masuk';
+import Masuk from './Masuk'
 
 const App = () => {
   return (
