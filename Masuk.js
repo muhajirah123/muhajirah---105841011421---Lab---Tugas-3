@@ -1,10 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import Judul from './component/Judul';
-import Input from './component/Input';
-import Tombol from './component/Tombol';
-import Teks from './component/Teks';
-import Icon from './component/Icon';
+import Judul from '../component/Judul';
+import Input from '../component/Input';
+import Tombol from '../component/Tombol';
+import Teks from '../component/Teks';
+import Icon from '../component/Icon';
 
 const Masuk = () => {
      return (
@@ -34,7 +34,7 @@ const Masuk = () => {
             <View style={{
                 marginTop: -40
             }}>
-                <Tombol backgroundColor="#FF0000" text="LOGIN" />
+                <Tombol backgroundColor="#FF0000" text="SignUp" />
             </View>
 
             <View style={{

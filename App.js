@@ -1,11 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-import Masuk from './Masuk'
+import Masuk from './pages/Masuk'
 
 const App = () => {
   return (
     <View>
-     {/*<Masuk/>*/}
+     <Masuk/>
      {/*<Gabung/>*/}
      {/*<ForgetPassword/>*/}
     </View>
