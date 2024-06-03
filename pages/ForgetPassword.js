@@ -1,10 +1,10 @@
 import React from 'react';
 import { View } from 'react-native';
-import Judul from './component/Judul';
-import Input from './component/Input';
-import Tombol from './component/Tombol';
-import Teks from './component/Teks';
-import Icon from './component/Icon';
+import Judul from '../component/Judul';
+import Input from '../component/Input';
+import Tombol from '../component/Tombol';
+import Teks from '../component/Teks';
+import Icon from '../component/Icon';
 
 const ForgetPassword = () => {
      return (
