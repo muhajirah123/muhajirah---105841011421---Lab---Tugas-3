@@ -26,4 +26,4 @@ import { View, Text } from 'react-native';
         );
     };
     
-    export default Tombol;
+    export default Tombol;

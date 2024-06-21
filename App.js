@@ -1,30 +1,25 @@
-import { StyleSheet,Text,View } from 'react-native'
-import React from 'react'
-import{useFonts} from 'expo-font'
-const App = () => {
-  const [fontsLoaded,fontError] = useFonts({
-    'Metro-Bold':require('./assets/fonts/Metropolis-Bold.otf'),
-    'Metro-Medium':require('./assets/fonts/Metropolis-Medium.otf'),
-    'Metro-SemiBold':require('./assets/fonts/Metropolis-SemiBold.otf'),
-    'Metro-Black':require('./assets/fonts/Metropolis-Black.otf'),
-  });
-  if (!fontsLoaded) return <View>
-    <Text>Font tidak ditemukan !</Text>
-  </View>
-  return(
-    <View style={{
-      flex:1,
-      justifyContent:'center',
-      alignItems:'center',
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-    }}>
-      <Text style ={{fontSize:30}}> Font Biasa </Text>
-      <Text style ={{fontFamily:'Metro-Bold',fontSize:30}}> Metro Bold</Text>
-      <Text style ={{fontFamily:'Metro-Medium',fontSize:30}}> Metro Medium</Text>
-      <Text style ={{fontFamily:'Metro-SemiBold',fontSize:30}}> Metro SemiBold</Text>
-      <Text style ={{fontFamily:'Metro-Black',fontSize:30}}> Metro Black</Text>
-    </View>
-  )
+import LoginPage from './pages/LoginPage';
+import ForgetPassword from './pages/ForgetPassword';
+import VisualSearch from './pages/VisualSearch';
+import Masuk from './pages/Masuk';
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Masuk">
+        <Stack.Screen name="LoginPage" component={LoginPage} />
+        <Stack.Screen name="Masuk" component={Masuk} />
+        <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
+        <Stack.Screen name="VisualSearch" component={VisualSearch} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
-export default App
+export default App;

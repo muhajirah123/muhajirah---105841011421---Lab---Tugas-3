@@ -10,7 +10,7 @@ const ForgetPassword = () => {
      return (
         <View style={{
             flex: 1,
-            backgroundColor: '#FFFFFF'
+           marginBottom: 50,
         }}>
             <View style={{
 
@@ -18,45 +18,45 @@ const ForgetPassword = () => {
                 <Judul text="Forget Password" />
             </View>
 
-
             <View style={{
-                marginTop: 30
+                padding: 5
             }}>
-               <Input placeholder="Email" borderColor="#FF0000" placeholderTextColor="#FF0000" />
+            <Teks text="Please, enter your email address. You will receive a link to create a new password via email." />
             </View>
 
             <View style={{}}>
+               <Input placeholder="Email" borderColor="#FF0000" placeholderTextColor="#FF0000" />
+            </View>
+            
+            <View style={{
+                marginTop:-20
+            }}>
+
             <Teks text="Not a valid email address. Should be your@email.com" color="red" fontSize={11} />
-
             </View>
 
             <View style={{
-                marginTop: -50,
+                marginTop: -20,
 
             }}>
-                <Tombol backgroundColor="#FF0000" text="SEND" />
+                 <Tombol backgroundColor="#FF0000" text="SEND" />
             </View>
 
             <View style={{
-                marginTop: -50,
-                marginLeft: -100,
+                marginTop: -50
+              
 
             }}>
             </View>
 
             <View style={{
-                marginTop: -60,
-                alignItems: 'center',
-                flexDirection: 'row',
-                justifyContent: 'center',
                 gap: 30
 
             }}>
             </View>
-
-
+            
         </View>
     );
 }
 
-export default ForgetPassword;
+export default ForgetPassword;
