@@ -8,7 +8,6 @@ const Teks = ({ text,color, fontSize}) => {
             marginBottom: 80,
             paddingLeft: 190,
             marginTop: 20
-          
         }}>
             <Text style={{
                 fontSize: fontSize || 16,

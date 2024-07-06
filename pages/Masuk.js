@@ -17,7 +17,7 @@ const Masuk = ({ navigation }) => {
       </View>
 
       <View style={{
-        marginTop: -10
+        marginTop: -15
       }}>
         <Input placeholder="Name" />
         <Input placeholder="Email" />

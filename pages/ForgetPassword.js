@@ -36,14 +36,14 @@ const ForgetPassword = () => {
             </View>
 
             <View style={{
-                marginTop: -20,
+                marginTop: -10,
 
             }}>
                  <Tombol backgroundColor="#FF0000" text="SEND" />
             </View>
 
             <View style={{
-                marginTop: -50
+                marginTop: 50
               
 
             }}>
