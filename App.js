@@ -3,30 +3,37 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const LoginSimak = () => {
-  const [data, setData] = useState({
-    nim: '',
-    password: ''
-  });
+  const [data, setData] = useState({ nim: '', password: '' });
   const [userData, setUserData] = useState(null);
   const [error, setError] = useState('');
 
-  const onSubmit = () => {
-    axios.post('https://api.beasiswa.unismuh.ac.id/api/login', {
-      username: data.nim,
-      password: data.password
-    })
-      .then(response => {
-        if (response.status === 200) {
-          setUserData(response.data.data);
-          setError('');
-        }
-      })
-      .catch(error => {
-        console.log(error);
-        setError('Ada kesalahan. Silahkan cek kembali nim dan password anda.');
-        setUserData(null);
+  const validateInputs = () => {
+    if (!data.nim || !data.password) {
+      setError('Nim dan Password tidak boleh kosong.');
+      return false;
+    }
+    return true;
+  };
+
+  const onSubmit = async () => {
+    if (!validateInputs()) return;
+
+    try {
+      const response = await axios.post('https://api.beasiswa.unismuh.ac.id/api/login', {
+        username: data.nim,
+        password: data.password,
       });
-  }
+
+      if (response.status === 200) {
+        setUserData(response.data.data);
+        setError('');
+      }
+    } catch (error) {
+      console.log(error);
+      setError('Ada kesalahan. Silahkan cek kembali nim dan password anda.');
+      setUserData(null);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -124,5 +131,5 @@ const styles = StyleSheet.create({
     height: 100,
     borderRadius: 50,
     marginTop: 10,
- },
+  },
 });
